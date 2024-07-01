@@ -1,0 +1,6 @@
+<div class="todo-details">
+  <h2>{{ (todo$ | async)?.title }}</h2>
+  <p>ID: {{ (todo$ | async)?.id }}</p>
+  <p>Completed: {{ (todo$ | async)?.completed }}</p>
+  <button (click)="goBack()">Back to List</button>
+</div>

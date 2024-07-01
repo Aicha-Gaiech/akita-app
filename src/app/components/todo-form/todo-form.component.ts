@@ -11,7 +11,7 @@ export class TodoFormComponent {
 
   add(title: string) {
     const id = Math.random();
-    this.todoService.updateTodo({
+    this.todoService.addTodo({
       id,
       title,
       completed: false

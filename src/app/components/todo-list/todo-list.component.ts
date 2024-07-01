@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { TodoService } from 'src/app/services/todo.service';
 import { Todo } from 'src/app/state/todo.model';
 import { TodoQuery } from 'src/app/state/todo.query';
 
@@ -12,10 +13,13 @@ export class TodoListComponent {
 
   todos$!: Observable<Todo[]>;
 
-  constructor(private todoQuery: TodoQuery) { }
+  constructor(private todoQuery: TodoQuery, private todoService: TodoService) { }
 
   ngOnInit(): void {
     this.todos$ = this.todoQuery.getTodos();
+  }
+  toggleCompleted(todo: Todo) {
+    this.todoService.toggleCompleted(todo);
   }
 
 }
