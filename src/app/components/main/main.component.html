@@ -1,3 +1,15 @@
-<h1>Todos</h1>
-<app-todo-form></app-todo-form>
-<app-todo-list></app-todo-list>
+<div *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+  <div class="logout-container">
+    <button class="logoutBtn" (click)="logout()">Log out</button>
+  </div>
+
+  <div>
+    <h1>Todos</h1>
+    <app-todo-form></app-todo-form>
+    <app-todo-list></app-todo-list>
+  </div>
+</div>
+
+<ng-template #loggedOut>
+  <button class="loginBtn" (click)="login()">Log in</button>
+</ng-template>
