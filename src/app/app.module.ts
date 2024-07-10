@@ -9,6 +9,7 @@ import { OneTodoComponent } from './components/one-todo/one-todo.component';
 import { MainComponent } from './components/main/main.component';
 import { provideAuth0 } from '@auth0/auth0-angular';
 import { environment } from 'src/environment/environment';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { environment } from 'src/environment/environment';
     TodoListComponent,
     OneTodoComponent,
     MainComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

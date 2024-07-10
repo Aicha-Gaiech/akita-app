@@ -1,26 +1,5 @@
 h1{
     color: rgb(61, 131, 192);
 }
-.logout-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 30px;
-  }
-  .logoutBtn {
-    padding: 10px 10px;
-    background-color: #9b2533;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .loginBtn{
-    margin-top: 30px;
-    padding: 10px 20px;
-    background-color: #27bcda;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+
 

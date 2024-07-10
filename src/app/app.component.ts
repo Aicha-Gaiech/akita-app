@@ -3,6 +3,7 @@ import { TodoService } from './services/todo.service';
 import { TodoQuery } from './state/todo.query';
 import { Observable } from 'rxjs';
 import { Todo } from './state/todo.model';
+import { AuthService } from '@auth0/auth0-angular';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { Todo } from './state/todo.model';
 export class AppComponent {
   todos$!: Observable<Todo[]>;
 
-  constructor(private todoQuery: TodoQuery, private todoService: TodoService) { }
+  constructor(private todoQuery: TodoQuery, public auth: AuthService) { }
 
   ngOnInit(): void {
     this.todos$ = this.todoQuery.getTodos();
